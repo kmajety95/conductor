@@ -9,6 +9,7 @@ namespace Conductor.Steps
         {
             services.AddTransient<HttpRequest>();
             services.AddTransient<EmitLog>();
+            services.AddTransient<FunctionStep>();
         }
     }
 }

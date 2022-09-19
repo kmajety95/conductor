@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WorkflowCore.Interface;
@@ -9,79 +10,32 @@ using WorkflowCore.Models;
 
 namespace Conductor.Steps
 {
-    public class FunctionStep : StepBodyAsync
+    public class FunctionStep : IFunctionStep
     {
-        //Input values
-        public string AzureFunctionAppName { get; set; }
-        public string AzureFunctionName { get; set; }
-        public string Token { get; set; }
-        public IDictionary<string, object> Headers { get; set; }
-        public IDictionary<string, object> Parameters { get; set; }
-        public ExpandoObject Body { get; set; }
+        public FunctionStep() { }
 
-        public DataFormat Format { get; set; } = DataFormat.Json;
-        public Method Method { get; set; } = Method.GET;
-
-        //Internal Properties.
-        private string AzureFunctionBaseURL = @"http://{0}.azurewebsites.net";
-        private string AzureFunctionURL = @"/api/{1}?code={1}";
-
-        //output values
-        public string ErrorMessage { get; set; }
-        public bool IsSuccessful { get; set; }
-        public int ResponseCode { get; set; }
-        public dynamic ResponseBody { get; set; }
-
-        public override async Task<ExecutionResult> RunAsync(IStepExecutionContext context)
+        public virtual Task<ExecutionResult> RunAsync(IStepExecutionContext context)
         {
-            if (string.IsNullOrEmpty(AzureFunctionAppName) || string.IsNullOrEmpty(AzureFunctionName))
+            var functionResult = String.Empty;
+            var functionAppURL = "https://waas-test-kk.azurewebsites.net/api/HttpTrigger1?code=bHsF82gmCX6w6y9bpcaDa-N5EEfw9LGthGTl3YAoy-IoAzFu7ac_sQ==";
+            var requestObject = new JsonObject();
+            requestObject.Add("name", "Hello There");
+            var content = new StringContent(requestObject.ToString(), encoding: System.Text.Encoding.UTF8, "application/json");
+            using (HttpClient client = new HttpClient())
             {
-                throw new Exception("Please define Azure Function App and Function App Name.");
-            }
-
-            var client = new RestClient(string.Format(AzureFunctionBaseURL, AzureFunctionAppName));
-            var request = new RestRequest(string.Format(AzureFunctionURL, AzureFunctionName, Token), Method, Format);
-
-            if (Headers != null)
-            {
-                foreach (var header in Headers)
-                    request.AddHeader(header.Key, Convert.ToString(header.Value));
-            }
-
-            if (Parameters != null)
-            {
-                foreach (var param in Parameters)
-                    request.AddQueryParameter(param.Key, Convert.ToString(param.Value));
-            }
-
-            if (Body != null)
-            {
-                switch (Format)
+                client.DefaultRequestHeaders.Add("x-functions-key", "bHsF82gmCX6w6y9bpcaDa-N5EEfw9LGthGTl3YAoy-IoAzFu7ac_sQ==");
+                using (HttpResponseMessage responseMessage = client.PostAsync(functionAppURL, content).Result)
                 {
-                    case DataFormat.Json:
-                        request.AddJsonBody(Body);
-                        break;
-                    case DataFormat.Xml:
-                        request.AddXmlBody(Body);
-                        break;
+                    using (HttpContent responseContent = responseMessage.Content)
+                    {
+                        var responseString = responseContent.ReadAsStringAsync().Result;
+                        functionResult = responseString;
 
+                    }
                 }
-            }
 
-            var response = await client.ExecuteAsync<dynamic>(request);
-            IsSuccessful = response.IsSuccessful;
-
-            if (response.IsSuccessful)
-            {
-                ResponseCode = (int)response.StatusCode;
-                ResponseBody = response.Data;
             }
-            else
-            {
-                ErrorMessage = response.ErrorMessage;
-            }
-
-            return ExecutionResult.Next();
+            return Task.FromResult(ExecutionResult.Next());
         }
     }
 }

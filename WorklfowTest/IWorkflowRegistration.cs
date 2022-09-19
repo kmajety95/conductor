@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Conductor.Steps;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,13 @@ namespace WorklfowTest
 {
     public class IWorkflowRegistration : IWorkflow
     {
-        public string Id => throw new NotImplementedException();
+        public string Id => "test-workflow";
 
-        public int Version => throw new NotImplementedException();
+        public int Version => 1;
 
         public void Build(IWorkflowBuilder<object> builder)
         {
-            
+            builder.StartWith<SecondStep>();
         }
     }
 }

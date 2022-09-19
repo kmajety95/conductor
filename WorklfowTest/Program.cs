@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WorkflowCore.Interface;
+using WorklfowTest;
 
-public class Program
+public static class Program
 {
-    public static void main(String[] args)
+    public static void Main(String[] args)
     {
         IServiceProvider serviceProvider = ConfigureServices();
         var host = serviceProvider.GetService<IWorkflowHost>();
@@ -13,11 +14,12 @@ public class Program
         Console.ReadLine();
         host.Stop();
     }
-
+        
     private static IServiceProvider ConfigureServices()
     {
         //setup dependency injection
         IServiceCollection services = new ServiceCollection();
+        services.AddLogging();
         services.AddWorkflow();
         var serviceProvider = services.BuildServiceProvider();
         return serviceProvider;

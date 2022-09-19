@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WorklfowTest
 {
-    public class FirstStep : FunctionStep
+    public class TestStep : FunctionStep
     {
     }
 }

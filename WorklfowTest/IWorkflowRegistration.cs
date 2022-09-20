@@ -10,13 +10,13 @@ namespace WorklfowTest
 {
     public class IWorkflowRegistration : IWorkflow
     {
-        public string Id => "test-workflow";
+        public string Id => nameof(IWorkflowRegistration);
 
         public int Version => 1;
 
         public void Build(IWorkflowBuilder<object> builder)
         {
-            builder.StartWith<SecondStep>();
+            builder.StartWith<FirstStep>();
         }
     }
 }

@@ -251,7 +251,7 @@ namespace Conductor.Domain.Services
 
         private Action<IStepBody, object, IStepExecutionContext> BuildScalarInputAction(KeyValuePair<string, object> input, PropertyInfo stepProperty)
         {
-            var sourceExpr = System.Convert.ToString(input.Value);
+                var sourceExpr = System.Convert.ToString(input.Value);
             
             void acn(IStepBody pStep, object pData, IStepExecutionContext pContext)
             {

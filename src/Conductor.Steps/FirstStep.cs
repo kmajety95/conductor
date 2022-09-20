@@ -9,10 +9,5 @@ namespace Conductor.Steps
 {
     public class FirstStep : FunctionStep
     {
-        public override async Task<ExecutionResult> RunAsync(IStepExecutionContext context)
-        {
-            Console.WriteLine("Test");
-            return ExecutionResult.Next();
-        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
+using WorkflowCore.Models;
 
 namespace Conductor.Models
 {
@@ -16,5 +17,6 @@ namespace Conductor.Models
         public string Reference { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime? EndTime { get; set; }
+        public ExecutionPointerCollection executionPointerCollection { get; set; }
     }
 }

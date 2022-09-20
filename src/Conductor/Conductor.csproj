@@ -7,6 +7,7 @@
     <UserSecretsId>0b178d89-9937-49c8-b1f1-efb5f96e516d</UserSecretsId>
     <Version>1.0.3</Version>
     <StartupObject>Conductor.Program</StartupObject>
+    <ApplicationInsightsResourceId>/subscriptions/5a611eed-e33a-44e8-92b1-3f6bf835905e/resourceGroups/kk-rg-test/providers/microsoft.insights/components/ecommerce-workflow</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="BouncyCastle.NetCore" Version="1.8.5" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.0" />

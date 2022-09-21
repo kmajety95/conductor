@@ -40,7 +40,7 @@ namespace Conductor.Controllers
         [Authorize(Policy = Policies.Viewer)]
         public async Task<ActionResult<WorkflowInstance>> Get(string id)
         {
-            _logger.LogWarning("Hello there");
+            _logger.LogDebug("Hello there");
             var result = await _persistenceProvider.GetWorkflowInstance(id);
             if (result == null)
                 return NotFound();

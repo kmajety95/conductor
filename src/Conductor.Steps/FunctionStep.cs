@@ -20,25 +20,43 @@ namespace Conductor.Steps
 
         public string Message { get; set; }
 
-        public string Status;
+        public string Status { get; set; }
 
-        public string ResourceId;
+        public int StatusCode { get; set; }
+
+        public string OrderId { get; set; }
+
+        public string UserName { get; set; }
+
+        public string ResponseMessage { get; set; }
+
         public class AzureFunctionResponse
         {
-            [JsonProperty("resourceId")]
-            public string ResourceId { get; set; }
+            [JsonProperty("message")]
+            public string Message { get; set; }
 
-            [JsonProperty("data")]
-            public string Data { get; set; }
+            [JsonProperty("orderId")]
+            public string OrderId { get; set; }
 
             [JsonProperty("status")]
             public string Status { get; set; }
+
+            [JsonProperty("statusCode")]
+            public int StatusCode { get; set; }
+
+            [JsonProperty("userName")]
+            public string UserName { get; set; }
         }
         public override ExecutionResult Run(IStepExecutionContext context)
         {
             var functionAppURL = FunctionAppURL;
             var requestObject = new JsonObject();
             requestObject.Add("name", Message);
+
+            if (String.IsNullOrEmpty(OrderId))
+            {
+                requestObject.Add("orderId", OrderId);
+            }
             var content = new StringContent(requestObject.ToString(), encoding: System.Text.Encoding.UTF8, "application/json");
             using (HttpClient client = new HttpClient())
             {
@@ -50,7 +68,10 @@ namespace Conductor.Steps
                         var responseString = responseContent.ReadAsStringAsync().Result;
                         var functionResult = JsonConvert.DeserializeObject<AzureFunctionResponse>(responseString);
                         Status = functionResult.Status;
-                        ResourceId = functionResult.ResourceId;
+                        OrderId = functionResult.OrderId;
+                        StatusCode = functionResult.StatusCode;
+                        UserName = functionResult.UserName;
+                        ResponseMessage = functionResult.Message;
                     }
                 }
             }           

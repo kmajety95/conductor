@@ -117,6 +117,7 @@ namespace Conductor
             });
 
             services.AddSingleton<IMapper>(x => new Mapper(config));
+            services.AddApplicationInsightsTelemetry();
 
         }
 

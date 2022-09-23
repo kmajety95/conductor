@@ -11,6 +11,8 @@ using Conductor.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.ApplicationInsights;
 using Newtonsoft.Json.Linq;
 using WorkflowCore.Interface;
 
@@ -24,18 +26,21 @@ namespace Conductor.Controllers
         private readonly IWorkflowController _workflowController;
         private readonly IPersistenceProvider _persistenceProvider;
         private readonly IMapper _mapper;
+        private readonly ILogger _logger;
 
-        public WorkflowController(IWorkflowController workflowController, IPersistenceProvider persistenceProvider, IMapper mapper)
+        public WorkflowController(IWorkflowController workflowController, IPersistenceProvider persistenceProvider, IMapper mapper, ILogger<WorkflowController> logger)
         {
             _workflowController = workflowController;
             _persistenceProvider = persistenceProvider;
             _mapper = mapper;
+            _logger = logger;
         }
 
         [HttpGet("{id}")]
         [Authorize(Policy = Policies.Viewer)]
         public async Task<ActionResult<WorkflowInstance>> Get(string id)
         {
+            _logger.LogDebug("Hello there");
             var result = await _persistenceProvider.GetWorkflowInstance(id);
             if (result == null)
                 return NotFound();

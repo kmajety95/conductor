@@ -1,32 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj": {}
+    "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj": {}
   },
   "projects": {
-    "D:\\Hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj": {
+    "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj",
         "projectName": "Conductor.Domain",
-        "projectPath": "D:\\Hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj",
-        "packagesPath": "C:\\Users\\kmajety\\.nuget\\packages\\",
-        "outputPath": "D:\\Hackathon\\conductor\\src\\Conductor.Domain\\obj\\",
+        "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj",
+        "packagesPath": "C:\\Users\\utkarshjain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kmajety\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\utkarshjain\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://msazure.pkgs.visualstudio.com/Liftr/_packaging/liftr.datadog-Consumption/nuget/v3/index.json": {},
+          "https://msazure.pkgs.visualstudio.com/_packaging/LiftrOfficial/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -94,36 +90,32 @@
         }
       }
     },
-    "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj": {
+    "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj",
+        "projectUniqueName": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj",
         "projectName": "Conductor.Steps",
-        "projectPath": "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj",
-        "packagesPath": "C:\\Users\\kmajety\\.nuget\\packages\\",
-        "outputPath": "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\obj\\",
+        "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj",
+        "packagesPath": "C:\\Users\\utkarshjain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kmajety\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\utkarshjain\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://msazure.pkgs.visualstudio.com/Liftr/_packaging/liftr.datadog-Consumption/nuget/v3/index.json": {},
+          "https://msazure.pkgs.visualstudio.com/_packaging/LiftrOfficial/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "D:\\Hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj": {
-                "projectPath": "D:\\Hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj"
+              "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj": {
+                "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Domain\\Conductor.Domain.csproj"
               }
             }
           }
@@ -168,36 +160,32 @@
         }
       }
     },
-    "D:\\Hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj": {
+    "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
+        "projectUniqueName": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
         "projectName": "WorklfowTest",
-        "projectPath": "D:\\Hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
-        "packagesPath": "C:\\Users\\kmajety\\.nuget\\packages\\",
-        "outputPath": "D:\\Hackathon\\conductor\\WorklfowTest\\obj\\",
+        "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
+        "packagesPath": "C:\\Users\\utkarshjain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kmajety\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\utkarshjain\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://msazure.pkgs.visualstudio.com/Liftr/_packaging/liftr.datadog-Consumption/nuget/v3/index.json": {},
+          "https://msazure.pkgs.visualstudio.com/_packaging/LiftrOfficial/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj": {
-                "projectPath": "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj"
+              "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj": {
+                "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj"
               }
             }
           }

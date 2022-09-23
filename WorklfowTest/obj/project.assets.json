@@ -4352,39 +4352,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kmajety\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\utkarshjain\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
+      "projectUniqueName": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
       "projectName": "WorklfowTest",
-      "projectPath": "D:\\Hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
-      "packagesPath": "C:\\Users\\kmajety\\.nuget\\packages\\",
-      "outputPath": "D:\\Hackathon\\conductor\\WorklfowTest\\obj\\",
+      "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\WorklfowTest.csproj",
+      "packagesPath": "C:\\Users\\utkarshjain\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\WorklfowTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kmajety\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\utkarshjain\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://msazure.pkgs.visualstudio.com/Liftr/_packaging/liftr.datadog-Consumption/nuget/v3/index.json": {},
+        "https://msazure.pkgs.visualstudio.com/_packaging/LiftrOfficial/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj": {
-              "projectPath": "D:\\Hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj"
+            "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj": {
+              "projectPath": "C:\\Users\\utkarshjain\\source\\repos\\hackathon\\conductor\\src\\Conductor.Steps\\Conductor.Steps.csproj"
             }
           }
         }
